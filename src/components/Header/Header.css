@@ -1,0 +1,16 @@
+.Header {
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+
+.Header h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.Header p {
+  margin-top: 20px;
+  font-size: 1.8rem;
+  font-weight: 600;
+}

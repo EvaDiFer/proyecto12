@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: 'Rajdhani', sans-serif;
+}
+
+:root {
+  --primary-gradient: linear-gradient(135deg, #3b3b98, #f97f51);
+  --secondary-gradient: linear-gradient(135deg, #6a79f6, #f6a667);
+  --disabled-background: #efd8d8;
+  --disabled-color: #bbb;
+  --font-color-dark: #333;
+  --font-color-medium: #555;
+  --font-color-light: #888;
+  --font-size-large: 2.5rem;
+  --font-size-medium: 1.5rem;
+  --font-size-small: 1.2rem;
+  --button-font-size: 1rem;
+  --button-padding: 10px 15px;
+  --button-radius: 5px;
+  --card-width-large: 150px;
+  --card-width-medium: 100px;
+  --card-width-small: 80px;
+  --card-height-large: 180px;
+  --card-height-medium: 100px;
+  --card-height-small: 60px;
+  --card-margin: 10px;
+  --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  --card-hover-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
+  --card-border-radius: 10px;
+  --card-back-border: 3px solid #f97f51;
+}
+
+.InitApp,
+.GameOne,
+.GameTwo {
+  position: relative;
+  height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--primary-gradient);
+  overflow: hidden;
+}
+
+.GameOne,
+.GameTwo {
+  flex-direction: column;
+  text-align: center;
+}
+
+h1 {
+  font-size: var(--font-size-large);
+  color: var(--font-color-dark);
+  margin-top: 2rem;
+}
+
+h2 {
+  font-size: var(--font-size-medium);
+  color: var(--font-color-medium);
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: var(--font-size-small);
+  color: var(--font-color-light);
+  margin-bottom: 20px;
+}
+
+span {
+  font-size: 2rem;
+  letter-spacing: 10px;
+  color: var(--font-color-dark);
+}

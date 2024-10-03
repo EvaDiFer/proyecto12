@@ -1,0 +1,23 @@
+// arraycards.js
+export const cards = [
+  { id: 1, name: 'bowser', image: '/bowser.png' },
+  { id: 2, name: 'diddy', image: '/diddy.png' },
+  { id: 3, name: 'ghost', image: '/ghost.png' },
+  { id: 4, name: 'lakitu', image: '/lakitu.png' },
+  { id: 5, name: 'luigi', image: '/luigi.png' },
+  { id: 6, name: 'mario', image: '/mario.png' },
+  { id: 7, name: 'peach', image: '/peach.png' },
+  { id: 8, name: 'toad', image: '/toad.png' },
+  { id: 9, name: 'wario', image: '/wario.png' },
+  { id: 10, name: 'yoshi', image: '/yoshi.png' },
+  { id: 11, name: 'bowser', image: '/bowser.png' },
+  { id: 12, name: 'diddy', image: '/diddy.png' },
+  { id: 13, name: 'ghost', image: '/ghost.png' },
+  { id: 14, name: 'lakitu', image: '/lakitu.png' },
+  { id: 15, name: 'luigi', image: '/luigi.png' },
+  { id: 16, name: 'mario', image: '/mario.png' },
+  { id: 17, name: 'peach', image: '/peach.png' },
+  { id: 18, name: 'toad', image: '/toad.png' },
+  { id: 19, name: 'wario', image: '/wario.png' },
+  { id: 20, name: 'yoshi', image: '/yoshi.png' },
+];

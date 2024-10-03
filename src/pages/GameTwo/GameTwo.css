@@ -1,0 +1,133 @@
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  min-width: 100%;
+  height: auto;
+}
+
+.card {
+  width: var(--card-width-medium);
+  height: var(--card-height-medium);
+  perspective: 1000px;
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  margin: var(--card-margin);
+  position: relative;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: var(--card-hover-shadow);
+  filter: brightness(1.05);
+}
+
+.card .front,
+.card .back {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--card-border-radius);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  backface-visibility: hidden;
+  transition: transform 0.5s ease;
+  box-shadow: var(--card-shadow);
+}
+
+.card .front {
+  background: var(--secondary-gradient);
+}
+
+.card .back {
+  background-color: #ffffff;
+  border: var(--card-back-border);
+  transform: rotateY(180deg);
+}
+
+.card.flipped .front {
+  transform: rotateY(180deg);
+}
+
+.card.flipped .back {
+  transform: rotateY(0deg);
+}
+
+.card img {
+  width: 80%;
+  height: 80%;
+  border-radius: 5px;
+  transition: transform 0.3s, filter 0.3s;
+}
+
+.card img:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+@media (max-width: 900px) {
+  .cards-container {
+    max-width: 90%;
+    gap: 8px;
+  }
+
+  .card {
+    width: calc(var(--card-width-medium) * 0.75);
+    height: calc(var(--card-height-medium) * 0.75);
+  }
+}
+
+@media (max-width: 600px) {
+  .cards-container {
+    max-width: 85%;
+    gap: 5px;
+    padding: 0 10px;
+  }
+
+  .card {
+    width: calc(var(--card-width-small) * 0.6);
+    height: calc(var(--card-height-small) * 0.6);
+  }
+
+  h1 {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+
+  /* Ajustar los botones */
+  .custom-button {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    margin: 3px;
+  }
+}
+
+@media (max-width: 400px) {
+  .cards-container {
+    max-width: 100%;
+    padding: 0 5px;
+  }
+
+  .card {
+    width: calc(var(--card-width-small) * 0.7);
+    height: calc(var(--card-height-small) * 0.7);
+  }
+
+  h1 {
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .custom-button {
+    padding: 4px 8px;
+    font-size: 0.7rem;
+    margin: 10px 10px;
+  }
+}

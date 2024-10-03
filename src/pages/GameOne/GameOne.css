@@ -1,0 +1,74 @@
+.GameOne div {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 450px;
+}
+
+.GameOne div button {
+  width: 40px;
+  height: 40px;
+  background: var(--secondary-gradient);
+  margin: 3px;
+}
+
+.contain-word {
+  display: flex;
+  flex-direction: column;
+}
+
+.hangman-image {
+  width: 280px;
+  height: 280px;
+}
+
+button {
+  font-size: var(--button-font-size);
+  margin: 3px;
+  border: none;
+  border-radius: var(--button-radius);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:disabled {
+  background-color: var(--disabled-background);
+  color: var(--disabled-color);
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .GameOne div button {
+    width: 30px;
+    height: 30px;
+  }
+
+  .hangman-image {
+    width: 200px;
+    height: 200px;
+  }
+
+  button {
+    font-size: calc(var(--button-font-size) * 0.9);
+  }
+}
+
+@media (max-width: 480px) {
+  .GameOne div button {
+    width: 25px;
+    height: 25px;
+  }
+
+  .hangman-image {
+    width: 150px;
+    height: 150px;
+  }
+
+  button {
+    font-size: calc(var(--button-font-size) * 0.8);
+  }
+}
