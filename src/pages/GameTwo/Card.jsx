@@ -1,12 +1,12 @@
 import React from 'react';
 
 const Card = ({ card, onClick, isFlipped }) => (
-  <div className={`card ${isFlipped ? 'flipped' : ''}`} onClick={onClick}>
-    <div className='front'></div>
-    <div className='back'>
+  <article className={`card ${isFlipped ? 'flipped' : ''}`} onClick={onClick}>
+    <figure className='front' aria-hidden='true'></figure>
+    <figure className='back'>
       <img src={card.image} alt={card.name} />
-    </div>
-  </div>
+    </figure>
+  </article>
 );
 
 export default Card;
