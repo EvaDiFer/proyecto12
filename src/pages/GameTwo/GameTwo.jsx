@@ -19,21 +19,35 @@ const GameTwo = () => {
 
   return (
     <div className='GameTwo'>
-      <h1>Memory Game</h1>
-      <Score points={points} />
-      <CardContainer
-        shuffledCards={shuffledCards}
-        flippedCards={flippedCards}
-        matchedCards={matchedCards}
-        handleCardClick={handleCardClick}
-      />
-      {matchedCards.length === shuffledCards.length && <h2>¡Ganaste!</h2>}
-      <button className='custom-button' onClick={resetGame}>
-        Restart
-      </button>
-      <button className='custom-button' onClick={() => navigate('/')}>
-        Return to Home
-      </button>
+      <header>
+        <h1>Memory Game</h1>
+      </header>
+
+      <main>
+        <section>
+          <Score points={points} />
+        </section>
+
+        <section>
+          <CardContainer
+            shuffledCards={shuffledCards}
+            flippedCards={flippedCards}
+            matchedCards={matchedCards}
+            handleCardClick={handleCardClick}
+          />
+          {matchedCards.length === shuffledCards.length && <h2>¡Ganaste!</h2>}
+        </section>
+      </main>
+
+      <footer>
+        <button className='custom-button' onClick={resetGame}>
+          Restart
+        </button>
+
+        <button className='custom-button' onClick={() => navigate('/')}>
+          Return to Home
+        </button>
+      </footer>
     </div>
   );
 };

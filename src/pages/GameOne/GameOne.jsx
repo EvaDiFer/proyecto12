@@ -50,43 +50,53 @@ const GameOne = () => {
 
   return (
     <div className='GameOne'>
-      <h1>Hangman</h1>
-      <RenderHangmanImage mistakes={state.mistakes} />
+      <header>
+        <h1>Hangman</h1>
+      </header>
 
-      {/* Separamos los mensajes y el componente RenderWord */}
-      {state.gameOver ? (
-        <h2>You lost! The word was: {state.randomWord}</h2>
-      ) : state.won ? (
-        <h2>You won! The word was: {state.randomWord}</h2>
-      ) : (
-        <div className='contain-word'>
-          <h2>Guess the word:</h2>
-          <RenderWord randomWord={state.randomWord} rights={state.rights} />
-        </div>
-      )}
+      <main>
+        <RenderHangmanImage mistakes={state.mistakes} />
 
-      <h3>Wrong guesses: {Array.from(state.wrongs).join(', ')}</h3>
+        <section>
+          {state.gameOver ? (
+            <h2>You lost! The word was: {state.randomWord}</h2>
+          ) : state.won ? (
+            <h2>You won! The word was: {state.randomWord}</h2>
+          ) : (
+            <div className='contain-word'>
+              <h2>Guess the word:</h2>
+              <RenderWord randomWord={state.randomWord} rights={state.rights} />
+            </div>
+          )}
+        </section>
 
-      {!state.gameOver && !state.won && (
-        <RenderAlphabet
-          alphabet={alphabet}
-          evaluateGuess={evaluateGuess}
-          rights={state.rights}
-          wrongs={state.wrongs}
-          gameOver={state.gameOver}
-        />
-      )}
+        <section>
+          <h3>Wrong guesses: {Array.from(state.wrongs).join(', ')}</h3>
+        </section>
 
-      <button
-        className='custom-button'
-        onClick={() =>
-          dispatch({ type: 'START_GAME', payload: getRandomWord() })
-        }
-      >
-        Restart
-      </button>
+        {!state.gameOver && !state.won && (
+          <RenderAlphabet
+            alphabet={alphabet}
+            evaluateGuess={evaluateGuess}
+            rights={state.rights}
+            wrongs={state.wrongs}
+            gameOver={state.gameOver}
+          />
+        )}
+      </main>
 
-      <Button text='Return to Home' onClick={() => navigate('/')} />
+      <footer>
+        <button
+          className='custom-button'
+          onClick={() =>
+            dispatch({ type: 'START_GAME', payload: getRandomWord() })
+          }
+        >
+          Restart
+        </button>
+
+        <Button text='Return to Home' onClick={() => navigate('/')} />
+      </footer>
     </div>
   );
 };
