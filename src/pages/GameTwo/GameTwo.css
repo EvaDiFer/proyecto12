@@ -85,17 +85,17 @@
 @media (max-width: 600px) {
   .cards-container {
     max-width: 85%;
-    gap: 5px;
+    gap: 2px;
     padding: 0 10px;
   }
 
   .card {
-    width: calc(var(--card-width-small) * 0.6);
-    height: calc(var(--card-height-small) * 0.6);
+    width: calc(var(--card-width-small) * 1);
+    height: calc(var(--card-height-small) * 1);
   }
 
   h1 {
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-align: center;
     margin-bottom: 8px;
   }
@@ -111,18 +111,17 @@
 @media (max-width: 400px) {
   .cards-container {
     max-width: 100%;
-    padding: 0 5px;
+    padding: 0 2px;
   }
 
   .card {
-    width: calc(var(--card-width-small) * 0.7);
-    height: calc(var(--card-height-small) * 0.7);
+    width: calc(var(--card-width-small) * 0.9);
+    height: calc(var(--card-height-small) * 0.9);
   }
 
   h1 {
     font-size: 1rem;
     text-align: center;
-    margin-bottom: 10px;
   }
 
   .custom-button {
