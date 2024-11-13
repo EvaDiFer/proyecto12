@@ -59,8 +59,8 @@ button:disabled {
 
 @media (max-width: 480px) {
   .GameOne div button {
-    width: 25px;
-    height: 25px;
+    width: 35px;
+    height: 35px;
   }
 
   .hangman-image {
@@ -69,6 +69,6 @@ button:disabled {
   }
 
   button {
-    font-size: calc(var(--button-font-size) * 0.8);
+    font-size: calc(var(--button-font-size) * 1.2);
   }
 }
